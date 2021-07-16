@@ -1,0 +1,2 @@
+# pytorch_bert_multi_classification
+# 基于pytorch_bert的中文多标签分类
