@@ -18,7 +18,7 @@ transformers==4.5.1
 --main.py：主运行程序，包含训练、验证、测试、预测以及相关评价指标的计算<br>
 要预先下载好预训练的bert模型，放在和该项目同级下的model_hub文件夹下，即：<br>
 model_hub/bert-base-chinese/
-相关下载地址：<a hrefhttps://huggingface.co/bert-base-chinese/tree/main="">bert-base-chinese</a><br>
+相关下载地址：<a href="https://huggingface.co/bert-base-chinese/tree/main=">bert-base-chinese</a><br>
 需要的是vocab.txt、config.json、pytorch_model.bin
 
 ## 一般步骤
