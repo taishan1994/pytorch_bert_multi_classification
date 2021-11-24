@@ -82,6 +82,15 @@ def convert_bert_example(ex_idx, example: InputExample, tokenizer: BertTokenizer
     attention_masks = encode_dict['attention_mask']
     token_type_ids = encode_dict['token_type_ids']
 
+    while len(token_ids) < max_seq_len:
+        token_ids.append(0)
+        attention_masks.append(0)
+        token_type_ids.append(0)
+
+    assert len(token_ids) == max_seq_len
+    assert len(attention_masks) == max_seq_len
+    assert len(token_type_ids) == max_seq_len
+    
     if ex_idx < 3:
         decode_text = tokenizer.decode(np.array(token_ids)[np.where(np.array(attention_masks) == 1)[0]].tolist())
         logger.info(f"*** {set_type}_example-{ex_idx} ***")
